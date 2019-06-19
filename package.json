@@ -1,0 +1,27 @@
+{
+  "name": "set-fns",
+  "version": "0.0.0",
+  "description": "Functions for working with sets.",
+  "main": "index.js",
+  "repository": "https://github.com/haydn/set-fns",
+  "author": "Haydn Ewers",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "yarn tsc index.ts --downlevelIteration --lib ES2015 -d",
+    "test": "yarn tsc test.ts --downlevelIteration --lib ES2015 && node test.js",
+    "release": "np"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js.flow",
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "np": "^5.0.3",
+    "typescript": "^3.5.2"
+  }
+}
