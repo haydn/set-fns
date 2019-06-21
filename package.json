@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "yarn tsc index.ts --downlevelIteration --lib ES2015 -d",
-    "test": "yarn tsc test.ts --downlevelIteration --lib ES2015 && node test.js",
+    "build": "tsc index.ts --downlevelIteration --lib ES2015 -d",
+    "test": "tsc test.ts --downlevelIteration --lib ES2015 && node test.js",
     "release": "np"
   },
   "files": [
