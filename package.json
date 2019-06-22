@@ -1,9 +1,17 @@
 {
   "name": "set-fns",
   "version": "0.0.1",
-  "description": "Functions for working with sets.",
+  "description": "A utility library for working with sets.",
+  "repository": "github:haydn/set-fns",
+  "keywords": [
+    "set",
+    "utility",
+    "set theory",
+    "union",
+    "intersect",
+    "subset"
+  ],
   "main": "index.js",
-  "repository": "https://github.com/haydn/set-fns",
   "author": "Haydn Ewers",
   "license": "MIT",
   "private": false,

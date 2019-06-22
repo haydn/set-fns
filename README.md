@@ -1,6 +1,18 @@
-# set-fns
+<div align="center">
+  <h1>
+    <img src="logo.png" alt="set-fns" width="160" />
+  </h1>
+  <p>A utility library for working with sets.</p>
+  <p>
+    <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/set-fns.svg">
+    <img alt="npm" src="https://img.shields.io/npm/dw/set-fns.svg">
+  </p>
+</div>
 
-Functions for working with sets.
+## Features
+
+- Flow and TypeScript declarations included.
+- Zero dependencies.
 
 ## Installation
 
@@ -60,13 +72,13 @@ a === c; // false
 
 ### and
 
+<img src="illustrations/and.png" width="200" />
+
 ```ts
 declare const and: <T>(a: Iterable<T>, b: Iterable<T>) => Set<T>;
 ```
 
 Takes two iterables and returns a set of all items that appear in both.
-
-<img src="./illustrations/and.png" width="200" />
 
 ```js
 const a = [1, 2, 3, 4];
@@ -76,13 +88,13 @@ and(a, b); // Set { 3, 4 }
 
 ### or
 
+<img src="illustrations/or.png" width="200" />
+
 ```ts
 declare const or: <T>(a: Iterable<T>, b: Iterable<T>) => Set<T>;
 ```
 
 Takes two iterables and returns a set of all items that appear in either.
-
-<img src="./illustrations/or.png" width="200" />
 
 ```js
 const a = [1, 2, 3, 4];
@@ -92,13 +104,13 @@ or(a, b); // Set { 1, 2, 3, 4, 5, 6 }
 
 ### not
 
+<img src="illustrations/not.png" width="200" />
+
 ```ts
 declare const not: <T>(a: Iterable<T>, b: Iterable<T>) => Set<T>;
 ```
 
 Takes two iterables and returns a set of all items that appear the first, but not the second.
-
-<img src="./illustrations/not.png" width="200" />
 
 ```js
 const a = [1, 2, 3, 4];
@@ -108,13 +120,13 @@ not(a, b); // Set { 1, 2 }
 
 ### xor
 
+<img src="illustrations/xor.png" width="200" />
+
 ```ts
 declare const xor: <T>(a: Iterable<T>, b: Iterable<T>) => Set<T>;
 ```
 
 Takes two iterables and returns a set of all items that appear exclusively in the first or the second (do not appear in both iterables).
-
-<img src="./illustrations/xor.png" width="200" />
 
 ```js
 const a = [1, 2, 3, 4];
