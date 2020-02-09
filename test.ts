@@ -2,8 +2,12 @@ import { strict as assert } from "assert";
 import {
   set,
   and,
+  intersection,
   or,
+  union,
   not,
+  subtract,
+  difference,
   xor,
   equal,
   subset,
@@ -22,10 +26,14 @@ assert.deepEqual(set([1, 2, 3]), new Set([1, 2, 3]));
 })();
 
 assert.deepEqual(and([1, 2, 3], [2, 3, 4]), set([2, 3]));
+assert.deepEqual(intersection([1, 2, 3], [2, 3, 4]), set([2, 3]));
 
 assert.deepEqual(or([1, 2, 3], [2, 3, 4]), set([1, 2, 3, 4]));
+assert.deepEqual(union([1, 2, 3], [2, 3, 4]), set([1, 2, 3, 4]));
 
 assert.deepEqual(not([1, 2, 3], [2, 3, 4]), set([1]));
+assert.deepEqual(subtract([1, 2, 3], [2, 3, 4]), set([1]));
+assert.deepEqual(difference([1, 2, 3], [2, 3, 4]), set([1]));
 
 assert.deepEqual(xor([1, 2, 3], [2, 3, 4]), set([1, 4]));
 

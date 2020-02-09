@@ -44,8 +44,12 @@ const strictSuperset = (a: Iterable<any>, b: Iterable<any>): boolean =>
 export {
   set,
   and,
+  and as intersection,
   or,
+  or as union,
   not,
+  not as subtract,
+  not as difference,
   xor,
   equal,
   subset,

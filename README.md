@@ -32,7 +32,7 @@ npm install set-fns
 ## Usage
 
 ```js
-import { set, or as union, not as subtract, subset } from "set-fns";
+import { set, union, intersection, difference, subset } from "set-fns";
 
 const alphabet = set("abcdefghijklmnopqrstuvwxyz".split(""));
 
@@ -42,13 +42,13 @@ console.log("All characters", union(alphabet, sentence));
 
 console.log(
   "Characters from the alphabet used in the sentence",
-  intersect(alphabet, sentence)
+  intersection(alphabet, sentence)
 );
 
 if (!subset(sentence, alphabet)) {
   console.log(
     "Extra character(s) found in sentence!",
-    subtract(sentence, alphabet)
+    difference(sentence, alphabet)
   );
 }
 ```
@@ -71,7 +71,7 @@ a === b; // true
 a === c; // false
 ```
 
-### and
+### and / intersection
 
 <img src="illustrations/and.png" width="200" />
 
@@ -85,9 +85,10 @@ Takes two iterables and returns a set of all items that appear in both.
 const a = [1, 2, 3, 4];
 const b = [6, 5, 4, 3];
 and(a, b); // Set { 3, 4 }
+intersection(a, b); // Set { 3, 4 }
 ```
 
-### or
+### or / union
 
 <img src="illustrations/or.png" width="200" />
 
@@ -101,9 +102,10 @@ Takes two iterables and returns a set of all items that appear in either.
 const a = [1, 2, 3, 4];
 const b = [6, 5, 4, 3];
 or(a, b); // Set { 1, 2, 3, 4, 5, 6 }
+union(a, b); // Set { 1, 2, 3, 4, 5, 6 }
 ```
 
-### not
+### not / subtract / difference
 
 <img src="illustrations/not.png" width="200" />
 
@@ -117,6 +119,8 @@ Takes two iterables and returns a set of all items that appear the first, but no
 const a = [1, 2, 3, 4];
 const b = [6, 5, 4, 3];
 not(a, b); // Set { 1, 2 }
+subtract(a, b); // Set { 1, 2 }
+difference(a, b); // Set { 1, 2 }
 ```
 
 ### xor
