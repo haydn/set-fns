@@ -1,4 +1,7 @@
-/node_modules
-/index.js
+/cjs
+/esm
 /index.d.ts
+/index.js
+/node_modules
 /test.js
+/umd

@@ -12,6 +12,7 @@
 ## Features
 
 - Flow and TypeScript declarations included.
+- CommonJS, UMD and ESM modules provided.
 - Zero dependencies.
 
 ## Installation

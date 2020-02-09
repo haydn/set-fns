@@ -10,7 +10,7 @@ import {
   strictSubset,
   superset,
   strictSuperset
-} from "./";
+} from "./index";
 
 assert.deepEqual(set(), new Set());
 

@@ -11,19 +11,25 @@
     "intersect",
     "subset"
   ],
-  "main": "index.js",
+  "main": "cjs/index.js",
   "author": "Haydn Ewers",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc index.ts --downlevelIteration --lib ES2015 -d",
+    "build": "yarn build:declaration && yarn build:cjs && yarn build:umd && yarn build:esm",
+    "build:declaration": "tsc index.ts --downlevelIteration --declaration --emitDeclarationOnly",
+    "build:cjs": "tsc index.ts --downlevelIteration --target ES2015 --module CommonJS --outDir cjs",
+    "build:umd": "tsc index.ts --downlevelIteration --target ES2015 --module UMD --outDir umd",
+    "build:esm": "tsc index.ts --target ESNext --module ESNext --outDir esm",
     "test": "tsc test.ts --downlevelIteration --lib ES2015 && node test.js",
     "release": "np"
   },
   "files": [
     "index.d.ts",
     "index.js.flow",
-    "index.js",
+    "cjs/index.js",
+    "umd/index.js",
+    "esm/index.js",
     "LICENSE",
     "README.md"
   ],
