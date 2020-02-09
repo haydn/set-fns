@@ -1,6 +1,6 @@
 {
   "name": "set-fns",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A utility library for working with sets.",
   "repository": "github:haydn/set-fns",
   "keywords": [
