@@ -41,6 +41,9 @@ const superset = (a: Iterable<any>, b: Iterable<any>): boolean => subset(b, a);
 const strictSuperset = (a: Iterable<any>, b: Iterable<any>): boolean =>
   strictSubset(b, a);
 
+const intersects = (a: Iterable<any>, b: Iterable<any>): boolean =>
+  and(a, b).size > 0;
+
 export {
   set,
   and,
@@ -55,5 +58,6 @@ export {
   subset,
   strictSubset,
   superset,
-  strictSuperset
+  strictSuperset,
+  intersects
 };

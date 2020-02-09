@@ -13,7 +13,8 @@ import {
   subset,
   strictSubset,
   superset,
-  strictSuperset
+  strictSuperset,
+  intersects
 } from "./index";
 
 assert.deepEqual(set(), new Set());
@@ -64,3 +65,6 @@ assert(strictSuperset([4, 3, 2, 1], [1, 2, 3]));
 assert(!strictSuperset([3, 2, 1], [1, 2, 3]));
 
 assert(!strictSuperset([2, 1], [1, 2, 3]));
+
+assert(intersects([1, 2], [2, 3]));
+assert(!intersects([1, 2], [3, 4]));

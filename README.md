@@ -218,3 +218,19 @@ const c = [1, 2, 3];
 strictSuperset(a, b); // true
 strictSuperset(a, c); // false
 ```
+
+### intersects
+
+```ts
+declare const intersects: (a: Iterable<any>, b: Iterable<any>) => boolean;
+```
+
+Takes two iterables and returns true if the two intersect.
+
+```js
+const a = [1, 2];
+const b = [2, 3];
+const c = [3, 4];
+intersects(a, b); // true
+intersects(a, c); // false
+```
