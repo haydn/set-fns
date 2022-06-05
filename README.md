@@ -2,7 +2,7 @@
   <h1>
     <img src="logo.png" alt="set-fns" width="160" />
   </h1>
-  <p>A utility library for working with sets.</p>
+  <p>A utility library for working with sets in JavaScript.</p>
   <p>
     <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/set-fns.svg">
     <img alt="npm" src="https://img.shields.io/npm/dw/set-fns.svg">
@@ -11,6 +11,7 @@
 
 ## Features
 
+- Pure functions that support immutability.
 - Flow and TypeScript declarations included.
 - CommonJS, UMD and ESM modules provided.
 - Zero dependencies.
